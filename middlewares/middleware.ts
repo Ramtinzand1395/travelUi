@@ -8,7 +8,7 @@ function getLocal(req: NextRequest) {
   const negotiatorHeader: Record<string, string> = {};
   req.headers.forEach((value, key) => (negotiatorHeader[key] = value));
 
-  const languagaes = new Negotiator({ headers: negotiatorHeader }).language();
+  const languagaes = new Negotiator({ headers: negotiatorHeader }).languages();
 
   const defaltLocal = "fa-ir";
   const local = match(languagaes, locals, defaltLocal);
