@@ -1,12 +1,15 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
 const locales = ["en-us", "en", "fa-ir", "fa"];
 
-function getLocale(request) {
-  const negotiatorHeader = {};
+function getLocale(request: NextRequest) {
+  // <--- تایپ اضافه شد
+    const negotiatorHeader: Record<string, string> = {};
+
+  // const negotiatorHeader = {};
   request.headers.forEach((value, key) => (negotiatorHeader[key] = value));
 
   const languages = new Negotiator({ headers: negotiatorHeader }).languages();
@@ -17,7 +20,7 @@ function getLocale(request) {
   return locale;
 }
 
-export function middleware(request) {
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -34,7 +37,7 @@ export function middleware(request) {
     )
   );
 }
- 
+
 export const config = {
   // Ignore API, Next.js internal assets, favicon و تمام فایل‌هایی که پسوند دارند
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)"],
