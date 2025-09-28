@@ -5,11 +5,9 @@ const langs = {
   fa: () => import("@/langs/fa.json").then((module) => module.default),
 };
 
-// export const getLang = async (locale) => {
-//   langs[locale]();
-// };
+type Locale = keyof typeof langs;
 
-export const getLang = async (locale) => {
-  const loader = langs[locale] || langs["fa-ir"]; // fallback
-  return await loader(); // حتما await و return
+export const getLang = async (locale: Locale | string) => {
+  const loader = langs[locale as Locale] || langs["fa-ir"];
+  return await loader();
 };
