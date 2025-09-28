@@ -1,0 +1,46 @@
+{
+  "navbar": {
+    "btn": "login"
+  },
+  "header": {
+    "title": "Ramtin Truno CampSide",
+    "subtitle": "We wish to join you on every journey, sharing the joy of witnessing nature’s untouched beauty. With just one app, we can guide you on adventures across the globe.",
+    "Reviews": " Excellent Reviews",
+    "work": " How we work?",
+    "btn": "Download App",
+    "AguasCaliente": "Aguas Caliente",
+    "Elevation": " Elevaion ",
+    "Distance": "Distance"
+  },
+  "sectionOne": {
+    "title": "Putuk Truno Camp",
+    "subtitle": "Prigen, Pasuruan",
+    "peopleJoined": "50+ Joined"
+  },
+  "sectionTwo": {
+    "title": "Mountain View Camp",
+    "subtitle": "Somewhere in the Wilderness",
+    "peopleJoined": "50+ Joined"
+  },
+  "sectionThree": {
+    "title": "Feeling Lost And Not Knowing The Way?",
+    "subtitle": "Starting from the anxiety of the climbers when visiting a new climbing location, the possibility of getting lost is very large. That's why we are here for those of you who want to start an adventure"
+  },
+  "guide": {
+    "preTitle": "We are here for you",
+    "title": "Guide You to Easy Path",
+    "description": "Only with the hilink application you will no longer get lost and get lost again, because we already support offline maps when there is no internet connection in the field. Invite your friends, relatives and friends to have fun in the wilderness through the valley and reach the top of the mountain",
+    "destinationLabel": "Destination",
+    "destinationTime": "48 min",
+    "destinationName": "Aguas Calientes",
+    "startTrackLabel": "Start track",
+    "startTrackName": "Wonorejo Pasuruan"
+  },
+  "getApp": {
+    "title": "Get for free now!",
+    "subtitle": "Available on iOS and Android",
+    "appStore": "App Store",
+    "playStore": "Play Store"
+  },
+  "footer": {}
+}
