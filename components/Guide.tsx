@@ -1,10 +1,8 @@
+import { Dict } from "@/types/types";
 import Image from "next/image";
 import React from "react";
 interface GuideProps {
-  dict: Record<
-    string,
-    { title: string; subtitle: string; peopleJoined: string }
-  >;
+  dict: Dict;
 }
 const Guide = ({ dict }: GuideProps) => {
   return (

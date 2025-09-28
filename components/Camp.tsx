@@ -1,12 +1,15 @@
 import { PEOPLE_URL } from "@/constants";
+import { Dict } from "@/types/types";
 import Image from "next/image";
 
 interface CampProps {
   backgroundImage: string;
-  sec: "sectionOne" | "sectionTwo" | "sectionThree" | "sectionFor";
-  dict: Record<string, { title: string; subtitle: string; peopleJoined: string }>;
+  sec: "sectionOne" | "sectionTwo";
+  dict: Dict;
 }
-
+interface CampMainProps {
+  dict: Dict;
+}
 
 const CampSite = ({ backgroundImage, sec, dict }: CampProps) => {
   return (
@@ -46,7 +49,7 @@ const CampSite = ({ backgroundImage, sec, dict }: CampProps) => {
   );
 };
 
-const Camp = ({ dict }) => {
+const Camp = ({ dict }:CampMainProps) => {
   return (
     <section className="2xl:max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
       <div className="hide-scrollbar flex h-[340px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px]">

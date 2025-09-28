@@ -1,9 +1,12 @@
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
-
-const GetApp = ({ dict }) => {
-  console.log(dict["getApp"])
+import { Dict } from "@/types/types";
+interface GetAppProps {
+  dict: Dict;
+}
+const GetApp = ({ dict }:GetAppProps) => {
+ 
   return (
     <section className="flexCenter w-full flex-col pb-[100px]">
       <div className="get-app">

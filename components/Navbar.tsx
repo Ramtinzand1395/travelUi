@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "./Button";
 import LocaleSwitcher from "./localeSwitcher";
 
-const Navbar = ({ lang }: { lang: "en" | "fa" }) => {
+const Navbar = ({ lang }: { lang: "en-us" | "fa-ir" }) => {
   const links = NAV_LINKS[lang];
   return (
     <nav className="flexBetween max-container padding-container relative z-30 py-5">

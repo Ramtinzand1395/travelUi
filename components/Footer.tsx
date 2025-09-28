@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Footer = ({ lang }: { lang: "en" | "fa" }) => {
+const Footer = ({ lang }: { lang: "en-us" | "fa-ir" }) => {
   const INFO = FOOTER_CONTACT_INFO[lang];
   const LINKS = FOOTER_LINKS[lang];
   const sos = SOCIALS[lang];

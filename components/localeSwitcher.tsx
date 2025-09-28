@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function LocaleSwitcher() {
     const pathName = usePathname();
-    const redirectedPathName = (locale) => {
+    const redirectedPathName = (locale:string) => {
         if (!pathName) return "/";
         const segments = pathName.split("/");
         segments[1] = locale;

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import Button from "./Button";
+import { Dict } from "@/types/types";
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -20,7 +21,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
@@ -33,12 +34,15 @@ const cardVariants = {
     x: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut", // به جای cubic-bezier سفارشی
+      ease: "easeOut" as const,
     },
   },
 };
-
-const Hero = ({ dict, lang }) => {
+interface HeroProps {
+  dict: Dict;
+  lang: "fa-ir" | "en-us";
+}
+const Hero = ({ dict, lang }: HeroProps) => {
   return (
     <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
       <Image
@@ -47,7 +51,7 @@ const Hero = ({ dict, lang }) => {
         width={700}
         height={700}
         className={`absolute top-[300px] md:top-0 ${
-          lang === "fa" ? "left-0" : "right-0"
+          lang === "fa-ir" ? "left-0" : "right-0"
         }`}
       />
 

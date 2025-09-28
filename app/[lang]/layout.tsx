@@ -21,17 +21,18 @@ export default function RootLayout({
   params,
 }: {
   children: React.ReactNode;
+  params: { lang: "fa-ir" | "en-us" };
 }) {
   return (
     <html
-      className={params.lang === "fa" ? vazir.className : ""}
+      className={params.lang === "fa-ir" ? vazir.className : ""}
       lang={params.lang}
       dir={params.lang === "en-us" ? "ltr" : "rtl"}
     >
       <body>
-        <Navbar lang={params.lang }/>
+        <Navbar lang={params.lang} />
         <main className="relative overflow-hidden">{children}</main>
-        <Footer lang={params.lang } />
+        <Footer lang={params.lang} />
       </body>
     </html>
   );
